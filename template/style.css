@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a192f;
+    color: #e6f1ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.navbar__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #64ffda;
+}
+
+.navbar__menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__link {
+    color: #ccd6f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+    color: #64ffda;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem;
+    background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
+                url('/placeholder.svg?height=1080&width=1920');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #64ffda;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #8892b0;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__button {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #64ffda;
+    background-color: transparent;
+    color: #64ffda;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero__button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem;
+    background-color: #112240;
+}
+
+.card {
+    background-color: #233554;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card__title {
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.card__description {
+    color: #8892b0;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.card__button {
+    padding: 0.8rem 1.5rem;
+    background-color: #64ffda;
+    color: #0a192f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: #4db3a4;
+}
+
+.footer {
+    background-color: #112240;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer__title {
+    color: #64ffda;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer__developers {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer__developer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__name {
+    color: #ccd6f6;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link {
+    color: #8892b0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #64ffda;
+}
+
+.footer__copyright {
+    color: #8892b0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer__developers {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .hero {
+        padding: 0 2rem;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .cards {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar__menu {
+        display: none;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__description {
+        font-size: 1rem;
+    }
+}

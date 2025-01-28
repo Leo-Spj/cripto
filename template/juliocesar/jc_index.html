@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jc_styñe.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cifrado César</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">CryptoLearn</div>
+        <div class="navbar__menu">
+            <a href="../index.html" class="navbar__link">Inicio</a>
+            <a href="#" class="navbar__link">Métodos</a>
+            <a href="#" class="navbar__link">Contacto</a>
+        </div>
+    </nav>
+
+    <main class="caesar-content">
+        <h1 class="caesar-content__title">Cifrado César</h1>
+        <p class="caesar-content__description">
+            El cifrado César, también conocido como cifrado por desplazamiento, es uno de los métodos de cifrado más simples y ampliamente conocidos. Lleva el nombre de Julio César, quien supuestamente lo usó para comunicarse con sus generales.
+            <br><br>
+            Este método consiste en sustituir cada letra del mensaje original por otra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A se convertiría en D, la B en E, y así sucesivamente.
+            <br><br>
+            Aunque es fácil de implementar y usar, el cifrado César es también fácil de romper, especialmente con la tecnología moderna. Sin embargo, sigue siendo una excelente introducción a los conceptos básicos de la criptografía.
+        </p>
+
+        <div class="caesar-interface">
+            <h2 class="caesar-interface__title">Prueba el Cifrado César</h2>
+            <textarea id="inputText" class="caesar-interface__input" placeholder="Ingresa tu texto aquí"></textarea>
+            <div class="caesar-interface__controls">
+                <label for="shift" class="caesar-interface__label">Desplazamiento:</label>
+                <input type="number" id="shift" class="caesar-interface__shift" min="1" max="25" value="3">
+                <button id="encryptBtn" class="caesar-interface__button caesar-interface__button--active">Cifrar</button>
+                <button id="decryptBtn" class="caesar-interface__button">Descifrar</button>
+            </div>
+            <textarea id="outputText" class="caesar-interface__output" readonly placeholder="Resultado"></textarea>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <h3 class="footer__title">Desarrollado por:</h3>
+            <div class="footer__developers">
+                <div class="footer__developer">
+                    <h4 class="footer__name">Piero Mendieta</h4>
+                    <a href="https://github.com/PieroMendieta" class="footer__link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <div class="footer__developer">
+                    <h4 class="footer__name">Joaquin Muñoz</h4>
+                    <a href="https://github.com/JoaquinMunoz" class="footer__link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                <div class="footer__developer">
+                    <h4 class="footer__name">Leonardo Espejo</h4>
+                    <a href="https://github.com/LeonardoEspejo" class="footer__link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <p class="footer__copyright">© 2023 Métodos de Cifrado Clásico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="jc_app.js"></script>
+</body>
+</html>
